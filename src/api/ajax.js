@@ -2,9 +2,16 @@
 ajax请求函数模块
 返回值: promise对象(异步返回的数据是: response.data)
  */
+
+/**
+ * 语法解释：
+ * return new Promise(function(resolve, reject) {}); //如果请求成功成功了就调用resolve，失败了调用reject
+ *
+ *
+ *
+ */
 import axios from 'axios'
 export default function ajax (url, data={}, type='GET') {
-
   return new Promise(function (resolve, reject) {
     // 执行异步ajax请求
     let promise
@@ -24,6 +31,7 @@ export default function ajax (url, data={}, type='GET') {
       // 发送post请求
       promise = axios.post(url, data)
     }
+
     promise.then(function (response) {
       // 成功了调用resolve()
       resolve(response.data)

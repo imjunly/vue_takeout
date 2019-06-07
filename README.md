@@ -1,6 +1,7 @@
 # gshop
 
 > A Vue.js project
+> Vue练手项目，高仿饿了么外卖app
 
 ## Build Setup
 
